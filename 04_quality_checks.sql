@@ -1,4 +1,4 @@
-select * from orders
-where total_amount is null	
-select * from orders
-where order_date is null	
+select * from order_items
+where unit_price is null or
+	  line_total is null or
+	  quantity is null
