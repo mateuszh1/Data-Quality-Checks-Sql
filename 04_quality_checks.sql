@@ -1,4 +1,3 @@
-select * from order_items
-where unit_price is null or
-	  line_total is null or
-	  quantity is null
+select email, count(*) as duplicated_count from customers
+group by email 
+having count(*) > 1
